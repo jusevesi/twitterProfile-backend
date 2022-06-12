@@ -18,6 +18,8 @@ const getUserFromDb = async (id) => {
             }
         };
         const user = await dynamoClient.scan(params).promise();
+        console.log(user.Items); 
+        console.log(user.Items.find(element => element.id === +id));
         return user.Items.find(element => element.id === +id) ;
     } catch (error) {
         throw error;
