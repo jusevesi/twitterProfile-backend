@@ -7,7 +7,7 @@ AWS.config.update({
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
-const TABLE_NAME = 'portfolio2';
+const TABLE_NAME = 'portfolio';
 
 const getUserFromDb = async (id) => {
     try {
@@ -18,7 +18,7 @@ const getUserFromDb = async (id) => {
             }
         };
         const user = await dynamoClient.scan(params).promise();
-        return user.Items[0];
+        return user.Items.find(element => element.id === +id) ;
     } catch (error) {
         throw error;
     }
