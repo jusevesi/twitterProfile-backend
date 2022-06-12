@@ -8,7 +8,7 @@ class TwitterService {
 
     async getUserIdByUsername(username = '') {
         try {
-            const { data: response } = await axios.get(`${process.env.TWITTER_URL}by?usernames=${username}`,
+            const { data: response } = await axios.get(`https://api.twitter.com/2/users/by?usernames=${username}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${process.env.AUTHORIZATION}`
@@ -25,7 +25,7 @@ class TwitterService {
 
     async getTwitsById(id = null) {
         try {
-            const { data: response } = await axios.get(`${process.env.TWITTER_URL}${id}/tweets`,
+            const { data: response } = await axios.get(`https://api.twitter.com/2/users/${id}/tweets`,
                 {
                     headers: {
                         Authorization: `Bearer ${process.env.AUTHORIZATION}`

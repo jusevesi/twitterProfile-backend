@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/**/*.spec.js",
     "start": "nodemon index.js"
   },
   "author": "",
@@ -14,5 +14,12 @@
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.21.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nock": "^13.2.6",
+    "node-mocks-http": "^1.11.0"
   }
 }
