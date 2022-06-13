@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk');
-// const credentials = new AWS.SharedIniFileCredentials({ profile: 'default' });
-// AWS.config.credentials = credentials;
 
 AWS.config.update({
-    region: 'us-east-1',
+    region: process.env.AWS_region,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 });
 
 const dynamoClient = new AWS.DynamoDB.DocumentClient();
@@ -36,14 +36,6 @@ const updateUserInDb = async (user) => {
         throw error;
     }
 }
-
-// const user = {
-//     id: 0,
-//     profileImage: 'image',
-//     name: 'Alexander',
-//     experience: 'TEXTO DESARROLLADOR',
-//     username: 'torrenegra'
-// }
 
 module.exports={
     getUserFromDb,

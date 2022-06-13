@@ -1,7 +1,5 @@
-//imports
 const axios = require('axios');
 
-//definition of the class Searches 
 class TwitterService {
 
     constructor() { }
