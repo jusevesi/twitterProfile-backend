@@ -1,4 +1,4 @@
-# Test-Zemoga
+# Test Zemoga Backend
 
 This repository contains the backend in node.js for the Zemoga development test.
 
