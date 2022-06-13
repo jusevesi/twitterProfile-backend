@@ -27,3 +27,7 @@ AWS_SECRET_ACCESS_KEY: #Your_AWS_SECRET_ACCESS_KEY
 ```sh
 npm start
 ```  
+Tests. Execute test
+```sh
+npm test
+```  

@@ -74,7 +74,6 @@ describe("User Controler", () => {
         const userService = new UserService();
         const response = await userService.updateUser(body);
         expect(response.message).equals('User with id: 0 successfully updated.');
-
     })
 
 
