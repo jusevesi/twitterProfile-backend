@@ -2,7 +2,7 @@
 
 This repository contains the backend in node.js for the Zemoga development test.
 
-## Steps to excecute the project
+## Steps to execute the project
 1. Install node js
 2. Clone the project
 ```sh
