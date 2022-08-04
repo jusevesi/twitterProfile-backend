@@ -1,6 +1,6 @@
 # Test Zemoga Backend
 
-This repository contains the backend in node.js for the Zemoga development test.
+This repository contains the backend in node.js for the TWITTER Profile test.
 
 ## Steps to execute the project
 1. Install node js
